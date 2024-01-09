@@ -24,3 +24,10 @@ A comprehensive user authentication system built with Django, providing seamless
 ```bash
 git clone https://github.com/Ashok-Prajapati2/django_user_auth.git
 
+cd django_user_auth
+chmod +x requirement.txt
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+
