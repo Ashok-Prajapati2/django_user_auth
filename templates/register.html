@@ -1,0 +1,55 @@
+
+{%extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+{%block content %}
+    <div class="page-content d-flex align-items-center">
+
+        <div class="container d-flex justify-content-center">
+
+            <div class="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-7 ">
+
+                <div class="auth-card">
+                  <div class="text-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" style="width: 150px;" alt="logo">
+                    <h6 class="mt-0 mb-1 pb-1">We are The Lotus Team</h6>
+                  </div>
+
+                    <hr class="separator">
+
+                    <!-- Signup-Form -->
+                    <form action='register' method='post'>
+                        {% csrf_token %}
+                        <div class="mb-2 mt-0">
+                            <input type="text" class="form-control auth-input" placeholder="Username"  required=True name='username'>
+                            <div id="emailHelp" class="form-text input-info-text">Username </div>
+                        </div>
+                        <div class="mb-2 mt-0">
+                            <input type="email" class="form-control auth-input" placeholder="example@gmail.com" aria-describedby="emailHelp" required=True name="email">
+                            <div id="emailHelp" class="form-text input-info-text">E-Mail </div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control auth-input" placeholder="First Name" required=True name="firstname">
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control auth-input" placeholder="Last Name" name="lastname">
+                        </div>
+                        <div class="mb-2">
+                            <input type="password" class="form-control auth-input" placeholder="Password" required=True name="password">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="password" class="form-control auth-input" placeholder="Re enter Password" required=True name="repassword">
+                        </div>
+
+                        <button class="btn auth-btn mt-2 mb-4">Registrieren</button>
+
+                    </form>
+
+                    <p class="text mb-4">Already have a Account? <a href="login" class="text-link"> Login</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock%}

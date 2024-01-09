@@ -1,0 +1,25 @@
+
+{%extends 'base.html' %}
+
+{% block title %}USER Home Page{% endblock %}
+
+{%block content %}
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Welcome to My Project</h1>
+      </div>
+    </div>
+  </div>
+  <div class="d-grid mt-5 pt-5 gap-4 col-4 mx-auto">
+    {%if not user.is_authenticated%}
+    <a type="button"  class="btn btn-primary" href="login">Login</a>
+    <a type="button"  class="btn btn-danger" href="register">Register</a>
+    {% endif %}
+    
+    {%if user.is_authenticated%}
+    <a type="button"  class="btn btn-primary" href="logout">Logout</a>
+    {% endif %}
+  </div>
+
+{% endblock%}

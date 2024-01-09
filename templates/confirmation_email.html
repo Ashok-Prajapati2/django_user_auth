@@ -1,0 +1,10 @@
+ {% autoescape off %}
+Welcome to my project
+
+Hello {{ name }}
+
+Please confirm your email by clicking the link .
+
+Confirmation link : http://{{domain}}{% url 'active' uid64=uid token=token%}
+{% endautoescape %}
+
