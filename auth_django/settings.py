@@ -29,7 +29,7 @@ EMAIL_HOST_PASSWORD = 'cjtdhdxjvqhlbcns'
 SECRET_KEY = 'django-insecure-p*l_5v4w3p#41rg-)-pqkulwo5&@@aoie8fxkaxv&003osb6-p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
